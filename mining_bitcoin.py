@@ -18,7 +18,7 @@ mant = bits & 0xffffff
 target_hexstr = '%064x' % (mant * (1<<(8*(exp - 3))))
 target_str = target_hexstr.decode('hex')
  
-nonce = 850000000
+nonce = 856000000
 while nonce < 0x10000000000:
     header = ( struct.pack("<L", ver) + prev_block.decode('hex')[::-1] +
           mrkl_root.decode('hex')[::-1] + struct.pack("<LLL", time_, 
